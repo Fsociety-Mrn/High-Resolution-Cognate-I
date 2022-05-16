@@ -64,6 +64,7 @@ const actions = [
 const Products = () => {
 
 
+
 let NavS = useNavigate();
 
 // Category data variable
@@ -104,6 +105,7 @@ useEffect(() => {
   .then(res=>{
     if (api)
     {
+      [...res.data]?.filter(e=>e.Product_name) ? console.log("may laman") : console.log("wala")
       setData(res.data)
 
       if (setTrue)
@@ -160,6 +162,7 @@ const verification_delete = e =>{
 
   axios.post('http://localhost/REACTJS/cognate1%20api/LoginAPI.php', login)
   .then(res=>{
+    console.log(res.data)
     if (res.data[0].Result)
     {
       delete_product() 
@@ -501,7 +504,7 @@ const open_dialog = (param) => {
           onChange={e => setSearch(e.target.value)}  
           placeholder='Search by product name' 
           variant='standard'
-          disabled={Data ? false : true}
+          disabled={Data? false : true}
           InputProps={{
             endAdornment: (
               <InputAdornment position="start">

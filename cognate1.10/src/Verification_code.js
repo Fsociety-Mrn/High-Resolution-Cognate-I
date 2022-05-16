@@ -129,6 +129,7 @@ const {setUser } = useContext(UserContext);
           {
             e.preventDefault()
             setText("") 
+            NavS("/")
           }
             }>Cancel</Button>
         </DialogActions>

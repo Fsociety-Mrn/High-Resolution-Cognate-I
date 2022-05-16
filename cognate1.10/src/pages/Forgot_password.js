@@ -48,9 +48,10 @@ e.preventDefault()
   axios.post('http://localhost/REACTJS/cognate1%20api/LoginAPI.php', sec)
   .then(
     res=>{
+
         setShower(res.data[0].Result)
         setShow(res.data[0].Result)
-        console.log(res.data[0].Result)
+        console.log(res.data)
 
     } 
   )

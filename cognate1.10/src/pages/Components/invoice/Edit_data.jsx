@@ -741,7 +741,14 @@ var para_de_maedit = set_para_di_maedits
   
   {/* Customer purchase */ }
                   <Grid item md={4}>
-                                     
+
+                  <Typography variant='subtitle1'>
+                  {"This product is " + dataproduct
+                  ?.filter(e=>e.Product_name === index.Customer_purchase)
+                  ?.map(e=>e.Product_Status)
+                  }
+                  </Typography>    
+
                     <Select
                       value={index.Customer_purchase}
                       fullWidth
@@ -783,6 +790,14 @@ var para_de_maedit = set_para_di_maedits
                         }
                       }
                   />
+
+                <Typography variant='subtitle2'>
+                  {"Available stocks is " + dataproduct
+                  ?.filter(e=>e.Product_name === index.Customer_purchase)
+                  ?.map(e=>e.Product_stocks)
+                  }
+                </Typography> 
+
                   </Grid>
   
   {/*  Price */}

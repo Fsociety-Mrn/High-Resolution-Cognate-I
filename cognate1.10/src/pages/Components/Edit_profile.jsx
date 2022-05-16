@@ -210,6 +210,7 @@ Something you neglected?
         </DialogContent>
 
         <DialogActions>
+
 {/* cancel edit */}
           <Button autoFocus onClick={e=> {
             e.preventDefault()
@@ -301,7 +302,7 @@ Something you neglected?
                        
                       }}>
                         <SettingsIcon fontSize='large'/>
-                        asdsd
+                
                       </IconButton>
 
                       <IconButton color='primary' onClick={e=>{

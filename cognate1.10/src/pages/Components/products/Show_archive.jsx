@@ -63,7 +63,9 @@ const [Data,setData] = useState()
 
 const [login,setLogin] = useState({
   "email": "",
-  "password" : ""
+  "password" : "",
+  "sec1": null,
+  "sec2": null
 })
 
 //search data variable
@@ -99,7 +101,7 @@ const delete_product = () => {
 
     axios.post("http://localhost/REACTJS/cognate1%20api/Delete_archiveProductAPI.php", { "Product_ID": productID } )
     .then(res => {
-
+      console.log(res.data)
       setOpenDialog(false)
       setShow_success(res.data[0].Result)
       
@@ -131,8 +133,10 @@ const verification_delete = e =>{
 
   axios.post('http://localhost/REACTJS/cognate1%20api/LoginAPI.php', login)
   .then(res=>{
+    console.log(res.data)
     if (res.data[0].Result)
     {
+      
       delete_product() 
       setErrors(res.data[0].Result)
     }else{
@@ -158,6 +162,7 @@ const open_dialog = (param) => {
 
   if(param.field === "action")
   {
+    // delete
     setProductID(param.id)
     setOpenDialog(true)
   }
@@ -492,18 +497,7 @@ const open_dialog = (param) => {
           />
    {/* CATEGORY STOCKS */}
    <Grid container item xs={2} md={1} margin={2}>
-          {/* <Select
-          value={category}
-          label="category"
-          defaultValue="{category}"
-          onChange={e => setCategory(e.target.value)}  
-          
-        >
 
-          <MenuItem >Ten</MenuItem>
-          <MenuItem  >Twenty</MenuItem>
-          <MenuItem>Thirty</MenuItem>
-        </Select> */}
 
           </Grid>
 

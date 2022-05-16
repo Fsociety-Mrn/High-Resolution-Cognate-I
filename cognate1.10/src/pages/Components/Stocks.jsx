@@ -209,12 +209,19 @@ const [cancel_api,setCancelApi] = useState(true)
       {
         if (cancel_api)
         {
+          try
+          {
+            [...res.data]?.filter(e=>e.Product_name) ? console.log("meron") : console.Console("wala")
+          }catch(e){
+            console.log("wala talag")
+          }
 
-          console.log(res.data)
       
         setData(res.data)
         if (setTrue)
         {
+          try{
+
           // console.log("run")
           if ([...res.data]?.filter(e=>e.Product_stocks <= 0).length === 0){
             setShow_dia(false)
@@ -222,6 +229,10 @@ const [cancel_api,setCancelApi] = useState(true)
             setList_stocks([...res.data]?.filter(e=>e.Product_stocks <= 0).map(e=>e.Product_name))
             setShow_dia(true)
   
+          }
+        }
+          catch(e){
+            console.log(e)
           }
         }
       }
@@ -246,7 +257,7 @@ const [cancelcat,setCancelcat] = useState(false)
       setChoice(res.data?.map(e=>e.category))
     }
   }
-  )
+  ).catch(err=>setCancelcat(false))
 
   return () => setCancelcat(false)
   

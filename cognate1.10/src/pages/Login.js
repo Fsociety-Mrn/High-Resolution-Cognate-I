@@ -71,7 +71,7 @@ const  [input, setInput]= useState({
   email: '',
   password:'',
   sec1: null,
-  sec2: null
+  sec2: null,
 
 })
 
@@ -91,7 +91,7 @@ const log =(e) => {
   axios.post('http://localhost/REACTJS/cognate1%20api/LoginAPI.php', input)
   .then(
     res=>{
-
+      console.log(input)
       setShower(res.data[0].Result)
       setUser_code({loggedIn_code: res.data[0].Result})
       if (res.data[0].Result) {NavS("/Authentication")}

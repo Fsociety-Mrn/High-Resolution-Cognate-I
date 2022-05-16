@@ -195,6 +195,7 @@ const add_customerdata = e => {
       setShow_err(res.data[0].Result)
       setMsg(res.data[0].Message)
       setOpenDialog(false)
+      setEmail(true)
     })
     setDisble(true)
 
@@ -750,12 +751,15 @@ const [disble,setDisble] = useState(false)
 
 {/* Customer purchase */ }
                 <Grid item md={4}>
+                  
                   <Typography variant='subtitle1'>
                   {"This product is " + dataproduct
                   ?.filter(e=>e.Product_name === index.Customer_purchase)
                   ?.map(e=>e.Product_Status)
                   }
-                  </Typography>          
+                  </Typography>    
+                  
+                        
                   <Select
                     value={index.Customer_purchase}
                     fullWidth
