@@ -15,6 +15,11 @@ this is backend API for entire application you need follow this instruction.
 
 1.  the entire REACTJs folder move this on htdocs on your xamp (or any localserver equivalent)
 
+## cognate.sql
+
+this the table of entire system
+in PHPmyadmin import this "cognate.sql"
+
 ## backend sending email
 
 this server made from expressJs to run this do the following
