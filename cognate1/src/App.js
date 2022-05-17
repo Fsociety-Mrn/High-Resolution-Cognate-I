@@ -51,8 +51,8 @@ const outket = () => (
 
 function App(){
 
-  const [user, setUser] = useState({ loggedIn: true });
-  const [user_code, setUser_code] = useState({ loggedIn_code: true });
+  const [user, setUser] = useState({ loggedIn: false });
+  const [user_code, setUser_code] = useState({ loggedIn_code: false });
 
   return (
     <>
@@ -61,7 +61,7 @@ function App(){
 
     <Routes>
     
-          <Route path="/" element={<Verification_code/>}/>
+          <Route path="/" element={<Login/>}/>
           <Route path="/Forgotpassword" element={<Forgot_password/>}/>
           <Route path="*" element={<Navigate to="/"/>}/>
  
