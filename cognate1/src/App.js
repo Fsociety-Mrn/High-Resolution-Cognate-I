@@ -61,9 +61,9 @@ function App(){
 
     <Routes>
     
-          <Route path="/" element={<Login/>}/>
+          <Route path="HIGH-resolution/" element={<Login/>}/>
           <Route path="/Forgotpassword" element={<Forgot_password/>}/>
-          <Route path="*" element={<Navigate to="/"/>}/>
+          <Route path="*" element={<Navigate to="HIGH-resolution/"/>}/>
  
  {/* send verification code */}
           <Route element={<Authenticate_code />}>
