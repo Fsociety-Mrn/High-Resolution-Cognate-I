@@ -61,7 +61,7 @@ function App(){
 
     <Routes>
     
-          <Route path="/" element={<Login/>}/>
+          <Route path="High-Resolution-Cognate-I/" element={<Login/>}/>
           <Route path="/Forgotpassword" element={<Forgot_password/>}/>
           <Route path="*" element={<Navigate to="/"/>}/>
  
