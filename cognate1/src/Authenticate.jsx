@@ -16,7 +16,7 @@ const useAuth = () => {
 const ProtectedRoutes = () => {
   const location = useLocation()
   const isAuth = useAuth()
-  return isAuth ? <Outlet /> : <Navigate to="/" replace state={{from: location}}/>;
+  return isAuth ? <Outlet /> : <Navigate to="High-Resolution-Cognate-I" replace state={{from: location}}/>;
 };
 
 export default ProtectedRoutes;

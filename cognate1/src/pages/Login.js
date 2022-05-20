@@ -9,11 +9,6 @@ import { UserContext } from '../App';
 import axios from 'axios';
 
 
-
-
-
-
-
 // Cutom Button
 const CButton = styled(Button)({
   color: "white",
@@ -65,7 +60,7 @@ const CTextField = styled(TextField)({
 
 const Login = () => {
 
-const {setUser_code } = useContext(UserContext);
+const {setUser} = useContext(UserContext);
 
 const  [input, setInput]= useState({
   email: '',
@@ -93,8 +88,8 @@ const log =(e) => {
     res=>{
       console.log(input)
       setShower(res.data[0].Result)
-      setUser_code({loggedIn_code: res.data[0].Result})
-      if (res.data[0].Result) {NavS("/Authentication")}
+      setUser({loggedIn: res.data[0].Result})
+      if (res.data[0].Result) {NavS("/Mainpage")}
     } 
   )
 
@@ -227,8 +222,8 @@ const log =(e) => {
               size='normal'/>
 
 {/* Hyperlink */}
-              <Typography variant='h5'  margin={2}>
-              <a href='/Forgotpassword'> forgot password</a></Typography>
+              <Typography variant='h5' onClick={()=> NavS("Forgotpassword")} margin={2}>
+              <a href=''> forgot password</a></Typography>
 
 {/* Log in Button */}
               <CButton onClick={log} variant='contained' fullWidth > Log in</CButton>

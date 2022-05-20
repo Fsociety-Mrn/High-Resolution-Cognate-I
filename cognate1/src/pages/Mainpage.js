@@ -30,7 +30,6 @@
   import AnalyticsOutlinedIcon from '@mui/icons-material/AnalyticsOutlined';
   import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
   import BusinessCenterOutlinedIcon from '@mui/icons-material/BusinessCenterOutlined';
-  import AutoGraphOutlinedIcon from '@mui/icons-material/AutoGraphOutlined';
   import FeedOutlinedIcon from '@mui/icons-material/FeedOutlined';
   import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 
@@ -94,7 +93,7 @@ import axios from 'axios';
   const buttons = [
 
     // Button Dashboard
-    <IconButton  color="secondary" onClick={(e)=>{e.preventDefault(); nv("/Mainpage") }}>
+    <IconButton  color="secondary" onClick={(e)=>{e.preventDefault(); nv("Mainpage") }}>
       {/* Icon */}
       <AnalyticsOutlinedIcon  fontSize='large'/> 
       {/* Text */}
@@ -102,14 +101,14 @@ import axios from 'axios';
     </IconButton>,
 
     // Button Stocks
-    <IconButton  color="secondary" onClick={(e)=>{e.preventDefault(); nv("/Mainpage/Stocks")}}>
+    <IconButton  color="secondary" onClick={(e)=>{e.preventDefault(); nv("Mainpage/Stocks")}}>
       <AddShoppingCartOutlinedIcon  margin='dense' fontSize='large'/>
       <Typography variant='h6' marginX={5.5} >Stocks</Typography>
     </IconButton>,
 
 
       // Button Products
-    <IconButton  color="secondary" onClick={(e)=>{e.preventDefault(); nv("/Mainpage/Products")}}>
+    <IconButton  color="secondary" onClick={(e)=>{e.preventDefault(); nv("Mainpage/Products")}}>
       <BusinessCenterOutlinedIcon  margin='dense' fontSize='large'/>
       <Typography variant='h6'marginX={4.2} >Products</Typography>
     </IconButton>,
@@ -121,7 +120,7 @@ import axios from 'axios';
     // </IconButton>,
 
       // Button Invoice
-    <IconButton  color="secondary" onClick={(e)=>{e.preventDefault(); nv("/Mainpage/Invoice") }}>
+    <IconButton  color="secondary" onClick={(e)=>{e.preventDefault(); nv("Mainpage/Invoice") }}>
       <FeedOutlinedIcon  margin='dense' fontSize='large'/>
       <Typography variant='h6'marginX={5.5} >Invoice</Typography>
     </IconButton>,
@@ -129,7 +128,7 @@ import axios from 'axios';
   ];
 
 
-  const { setUser} = useContext(UserContext);
+  const { setUser } = useContext(UserContext);
 
     return (
       <div>

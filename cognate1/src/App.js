@@ -8,7 +8,7 @@ import Authenticate_code from './Authenticate_code';
 import Verification_code from './Verification_code';
 
 
-import { Routes ,Route,Navigate ,Outlet, useNavigate, useLocation, } from 'react-router-dom';
+import { Routes ,Route,Navigate ,Outlet } from 'react-router-dom';
 
 import Mainpage from './pages/Mainpage';
 
@@ -41,12 +41,6 @@ const SidebarLayout = () => (
   </>
 );
 
-const outket = () => (
-  <>
-    <Outlet />
-  </>
-);
-
 
 
 function App(){
@@ -61,18 +55,18 @@ function App(){
 
     <Routes>
     
-          <Route path="High-Resolution-Cognate-I/" element={<Login/>}/>
-          <Route path="/Forgotpassword" element={<Forgot_password/>}/>
-          <Route path="*" element={<Navigate to="/"/>}/>
+          <Route path="High-Resolution-Cognate-I" element={<Login/>}/>
+          <Route path="High-Resolution-Cognate-I/Forgotpassword" element={<Forgot_password/>}/>
+          <Route path="*" element={<Navigate to="High-Resolution-Cognate-I"/>}/>
  
  {/* send verification code */}
           <Route element={<Authenticate_code />}>
-            <Route path="/Authentication" element={<Verification_code/> } /> 
+            <Route path="High-Resolution-Cognate-I/Authentication" element={<Verification_code/> } /> 
           </Route>
 
 {/* route to mainpage */}
           <Route element={<Authenticate />}>
-                <Route element={<SidebarLayout/> } >
+                <Route element={<SidebarLayout /> } >
 
                   <Route path="/Mainpage" element={<Dashboard/> } /> 
                   <Route path="/Mainpage/Stocks" element={<Stocks/> } /> 
@@ -80,7 +74,7 @@ function App(){
                     <Route path = "/Mainpage/Products/AddItem" element={<Add_item/>}/>
                     <Route path = "/Mainpage/Products/ArchiveList" element={<Show_archive/>}/>
 
-                  <Route path="/Mainpage/Invoice" element={<Invoice/> } />
+                  <Route path="Mainpage/Invoice" element={<Invoice/> } />
                     <Route path = "/Mainpage/Invoice/AddData" element={<Add_data/>}/>
                     <Route path = "/Mainpage/Invoice/EditData" element={<Edit_data/>}/>
                     <Route path = "/Mainpage/Invoice/DraftList" element={<Show_draft/>}/>
