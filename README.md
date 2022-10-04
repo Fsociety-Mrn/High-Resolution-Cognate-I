@@ -5,6 +5,9 @@ This website was created for academic purposes, and I used ReactJS Framework and
 ## Note:
 this website was publish via Github free domain but for the process such as login and updating use localhost
 
+
+https://fsociety-mrn.github.io/High-Resolution-Cognate-I/ 
+
 default password:
 email: s
 password: a
